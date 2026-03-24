@@ -13,6 +13,7 @@ const useFetch = (url) => {
     setError(null);
 
     const fetchData = async () => {
+      // debugger; // Для тестування зупинки в DevTools
       try {
         const response = await fetch(url, { signal: abortController.signal });
         if (!response.ok) {
